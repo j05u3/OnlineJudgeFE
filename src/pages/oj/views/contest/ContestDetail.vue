@@ -37,32 +37,32 @@
         <VerticalMenu-item :disabled="contestMenuDisabled"
                            :route="{name: 'contest-problem-list', params: {contestID: contestID}}">
           <Icon type="ios-photos"></Icon>
-          Problems
+          {{ $t('page.contests.menu.problems') }}
         </VerticalMenu-item>
 
         <VerticalMenu-item :disabled="contestMenuDisabled"
                            :route="{name: 'contest-announcement-list', params: {contestID: contestID}}">
           <Icon type="chatbubble-working"></Icon>
-          Announcements
+          {{ $t('page.contests.menu.announcements') }}
         </VerticalMenu-item>
 
         <VerticalMenu-item v-if="OIContestRealTimePermission"
                            :disabled="contestMenuDisabled"
                            :route="{name: 'contest-submission-list'}">
           <Icon type="navicon-round"></Icon>
-          Submissions
+          {{ $t('page.contests.menu.submissions') }}
         </VerticalMenu-item>
 
         <VerticalMenu-item v-if="OIContestRealTimePermission"
                            :disabled="contestMenuDisabled"
                            :route="{name: 'contest-rank', params: {contestID: contestID}}">
           <Icon type="stats-bars"></Icon>
-          Rankings
+          {{ $t('page.contests.menu.rankings') }}
         </VerticalMenu-item>
 
         <VerticalMenu-item :route="{name: 'contest-details', params: {contestID: contestID}}">
           <Icon type="home"></Icon>
-          Overview
+          {{ $t('page.contests.menu.overview') }}
         </VerticalMenu-item>
 
         <VerticalMenu-item v-if="showAdminHelper"
@@ -95,27 +95,27 @@
         contestPassword: '',
         columns: [
           {
-            title: 'StartAt',
+            title: this.$t('page.contests.table.startat'),
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.start_time))
             }
           },
           {
-            title: 'EndAt',
+            title: this.$t('page.contests.table.endat'),
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.end_time))
             }
           },
           {
-            title: 'ContestType',
+            title: this.$t('page.contests.table.contest_type'),
             key: 'contest_type'
           },
           {
-            title: 'Rule',
+            title: this.$t('page.contests.table.rule'),
             key: 'rule_type'
           },
           {
-            title: 'Creator',
+            title: this.$t('page.contests.table.creator'),
             render: (h, data) => {
               return h('span', data.row.created_by.username)
             }

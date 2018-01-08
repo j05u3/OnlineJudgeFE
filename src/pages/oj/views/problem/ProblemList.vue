@@ -2,26 +2,26 @@
   <Row type="flex" :gutter="18">
     <Col :span=19>
     <Panel shadow>
-      <div slot="title">Problem List</div>
+      <div slot="title">{{ $t('page.problem.title') }}</div>
       <div slot="extra">
         <ul class="filter">
           <li>
             <Dropdown @on-click="filterByDifficulty">
-              <span>{{query.difficulty === '' ? 'Difficulty' : query.difficulty}}
+              <span>{{query.difficulty === '' ? $t('page.problem.difficulty.title') : query.difficulty}}
                 <Icon type="arrow-down-b"></Icon>
               </span>
               <Dropdown-menu slot="list">
-                <Dropdown-item name="">All</Dropdown-item>
-                <Dropdown-item name="Low">Low</Dropdown-item>
-                <Dropdown-item name="Mid">Mid</Dropdown-item>
-                <Dropdown-item name="High">High</Dropdown-item>
+                <Dropdown-item name="">{{ $t('page.problem.difficulty.all') }}</Dropdown-item>
+                <Dropdown-item name="Low">{{ $t('page.problem.difficulty.low') }}</Dropdown-item>
+                <Dropdown-item name="Mid">{{ $t('page.problem.difficulty.mid') }}</Dropdown-item>
+                <Dropdown-item name="High">{{ $t('page.problem.difficulty.high') }}</Dropdown-item>
               </Dropdown-menu>
             </Dropdown>
           </li>
           <li>
             <i-switch size="large" @on-change="handleTagsVisible">
-              <span slot="open">Tags</span>
-              <span slot="close">Tags</span>
+              <span slot="open">{{ $t('page.problem.switch.tags') }}</span>
+              <span slot="close">{{ $t('page.problem.switch.tags') }}</span>
             </i-switch>
           </li>
           <li>
@@ -34,7 +34,7 @@
           <li>
             <Button type="info" @click="onReset">
               <Icon type="refresh"></Icon>
-              Reset
+              {{ $t('page.problem.button.refresh') }}
             </Button>
           </li>
         </ul>
@@ -51,7 +51,7 @@
 
     <Col :span="5">
     <Panel :padding="10">
-      <div slot="title" class="taglist-title">Tags</div>
+      <div slot="title" class="taglist-title">{{ $t('page.problem.taglist.title') }}</div>
       <Button v-for="tag in tagList"
               :key="tag.name"
               @click="filterByTag(tag.name)"
@@ -63,7 +63,7 @@
 
       <Button long id="pick-one" @click="pickone">
         <Icon type="shuffle"></Icon>
-        Pick one
+        {{ $t('page.problem.button.pickone') }}
       </Button>
     </Panel>
     <Spin v-if="loadings.tag" fix size="large"></Spin>
@@ -109,7 +109,7 @@
             }
           },
           {
-            title: 'Title',
+            title: this.$t('page.problem.table.title'),
             width: '35%',
             render: (h, params) => {
               return h('Button', {
@@ -129,25 +129,31 @@
             }
           },
           {
-            title: 'Level',
+            title: this.$t('page.problem.table.level'),
             render: (h, params) => {
               let t = params.row.difficulty
               let color = 'blue'
-              if (t === 'Low') color = 'green'
-              else if (t === 'High') color = 'yellow'
+              let text = this.$t('page.problem.difficulty.mid')
+              if (t === 'Low') {
+                color = 'green'
+                text = this.$t('page.problem.difficulty.low')
+              } else if (t === 'High') {
+                color = 'yellow'
+                text = this.$t('page.problem.difficulty.high')
+              }
               return h('Tag', {
                 props: {
                   color: color
                 }
-              }, params.row.difficulty)
+              }, text)
             }
           },
           {
-            title: 'Total',
+            title: this.$t('page.problem.table.total'),
             key: 'submission_number'
           },
           {
-            title: 'AC Rate',
+            title: this.$t('page.problem.table.ac_rate'),
             render: (h, params) => {
               return h('span', this.getACRate(params.row.accepted_number, params.row.submission_number))
             }
@@ -234,7 +240,7 @@
         if (value) {
           this.problemTableColumns.push(
             {
-              title: 'Tags',
+              title: this.$t('page.problem.table.tags'),
               align: 'center',
               width: '200px',
               render: (h, params) => {

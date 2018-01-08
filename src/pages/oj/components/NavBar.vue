@@ -4,36 +4,36 @@
       <div class="logo"><span>{{website.website_name}}</span></div>
       <Menu-item name="/">
         <Icon type="home"></Icon>
-        Home
+        {{ $t("navbar.home") }}
       </Menu-item>
       <Menu-item name="/problems">
         <Icon type="ios-keypad"></Icon>
-        Problems
+        {{ $t("navbar.problems") }}
       </Menu-item>
       <Menu-item name="/contests">
         <Icon type="trophy"></Icon>
-        Contests
+        {{ $t("navbar.contests") }}
       </Menu-item>
       <Menu-item name="/status">
         <Icon type="ios-pulse-strong"></Icon>
-        Status
+        {{ $t("navbar.status") }}
       </Menu-item>
       <Submenu name="">
         <template slot="title">
           <Icon type="podium"></Icon>
-          Rank
+          {{ $t("navbar.rank") }}
         </template>
         <Menu-item name="/acm-rank">
-          ACM Rank
+          {{ $t('navbarlist.rank.rank_acm') }}
         </Menu-item>
         <Menu-item name="/oi-rank">
-          OI Rank
+          {{ $t('navbarlist.rank.rank_oi') }}
         </Menu-item>
       </Submenu>
       <Submenu name="">
         <template slot="title">
           <Icon type="information-circled"></Icon>
-          About
+          {{ $t("navbar.about") }}
         </template>
         <Menu-item name="/about">
           Judger
@@ -47,13 +47,13 @@
           <Button type="ghost"
                   ref="loginBtn"
                   shape="circle"
-                  @click="handleBtnClick('login')">Login
+                  @click="handleBtnClick('login')">{{ $t("navbar.user.login") }}
           </Button>
           <Button v-if="website.allow_register"
                   type="ghost"
                   shape="circle"
                   @click="handleBtnClick('register')"
-                  style="margin-left: 5px;">Register
+                  style="margin-left: 5px;">{{ $t("navbar.user.register") }}
           </Button>
         </div>
       </template>
@@ -63,11 +63,11 @@
             <Icon type="arrow-down-b"></Icon>
           </Button>
           <Dropdown-menu slot="list">
-            <Dropdown-item name="/user-home">Home</Dropdown-item>
-            <Dropdown-item name="/status?myself=1">Submissions</Dropdown-item>
-            <Dropdown-item name="/setting/profile">Settings</Dropdown-item>
-            <Dropdown-item v-if="isAdminRole" name="/admin">Management</Dropdown-item>
-            <Dropdown-item divided name="/logout">Logout</Dropdown-item>
+            <Dropdown-item name="/user-home">{{ $t('usemenu.home') }}</Dropdown-item>
+            <Dropdown-item name="/status?myself=1">{{ $t('usemenu.submissions') }}</Dropdown-item>
+            <Dropdown-item name="/setting/profile">{{ $t('usemenu.settings') }}</Dropdown-item>
+            <Dropdown-item v-if="isAdminRole" name="/admin">{{ $t('usemenu.management') }}</Dropdown-item>
+            <Dropdown-item divided name="/logout">{{ $t('usemenu.logout') }}</Dropdown-item>
           </Dropdown-menu>
         </Dropdown>
       </template>

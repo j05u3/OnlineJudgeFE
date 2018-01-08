@@ -22,8 +22,8 @@
 
             <li>
               <i-switch size="large" v-model="formFilter.myself" @on-change="handleQueryChange">
-                <span slot="open">Mine</span>
-                <span slot="close">All</span>
+                <span slot="open">{{ $t('page.status.switch.mine') }}</span>
+                <span slot="close">{{ $t('page.status.switch.all') }}</span>
               </i-switch>
             </li>
             <li>
@@ -31,7 +31,7 @@
             </li>
 
             <li>
-              <Button type="info" icon="refresh" @click="getSubmissions">Refresh</Button>
+              <Button type="info" icon="refresh" @click="getSubmissions">{{ $t('page.status.button.refresh') }}</Button>
             </li>
           </ul>
         </div>
@@ -64,14 +64,14 @@
         },
         columns: [
           {
-            title: 'When',
+            title: this.$t('page.status.table.when'),
             align: 'center',
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.create_time))
             }
           },
           {
-            title: 'ID',
+            title: this.$t('page.status.table.id'),
             align: 'center',
             render: (h, params) => {
               if (params.row.show_link) {
@@ -92,7 +92,7 @@
             }
           },
           {
-            title: 'Status',
+            title: this.$t('page.status.table.status'),
             align: 'center',
             render: (h, params) => {
               return h('Tag', {
@@ -103,7 +103,7 @@
             }
           },
           {
-            title: 'Problem',
+            title: this.$t('page.status.table.problem'),
             align: 'center',
             render: (h, params) => {
               return h('span',
@@ -130,26 +130,26 @@
             }
           },
           {
-            title: 'Time',
+            title: this.$t('page.status.table.time'),
             align: 'center',
             render: (h, params) => {
               return h('span', utils.submissionTimeFormat(params.row.statistic_info.time_cost))
             }
           },
           {
-            title: 'Memory',
+            title: this.$t('page.status.table.memory'),
             align: 'center',
             render: (h, params) => {
               return h('span', utils.submissionMemoryFormat(params.row.statistic_info.memory_cost))
             }
           },
           {
-            title: 'Language',
+            title: this.$t('page.status.table.language'),
             align: 'center',
             key: 'language'
           },
           {
-            title: 'Author',
+            title: this.$t('page.status.table.author'),
             align: 'center',
             render: (h, params) => {
               return h('a', {
@@ -251,7 +251,7 @@
           return
         }
         const judgeColumn = {
-          title: 'Option',
+          title: this.$t('page.status.table.option'),
           fixed: 'right',
           align: 'center',
           width: 90,
@@ -267,7 +267,7 @@
                   this.handleRejudge(params.row.id, params.index)
                 }
               }
-            }, 'Rejudge')
+            }, this.$t('page.status.button.rejudge'))
           }
         }
         this.columns.push(judgeColumn)
@@ -297,7 +297,7 @@
       ...mapGetters(['isAuthenticated', 'user']),
       title () {
         if (!this.contestID) {
-          return 'Status'
+          return this.$t('page.status.title')
         } else if (this.problemID) {
           return 'Problem Submissions'
         } else {
@@ -305,7 +305,7 @@
         }
       },
       status () {
-        return this.formFilter.result === '' ? 'Status' : JUDGE_STATUS[this.formFilter.result].name
+        return this.formFilter.result === '' ? this.$t('page.status.status.title') : JUDGE_STATUS[this.formFilter.result].name
       },
       rejudgeColumnVisible () {
         return !this.contestID && this.user.admin_type === USER_TYPE.SUPER_ADMIN

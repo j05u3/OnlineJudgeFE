@@ -35,11 +35,11 @@
     <div id="share-btn">
       <Button v-if="submission.shared"
               type="warning" size="large" @click="shareSubmission(false)">
-        UnShare
+        {{ $t('page.status.button.unshare') }}
       </Button>
       <Button v-else
               type="primary" size="large" @click="shareSubmission(true)">
-        Share
+        {{ $t('page.status.button.share') }}
       </Button>
     </div>
     </Col>

@@ -4,13 +4,13 @@
       {{title}}
     </div>
     <div slot="extra">
-      <Button v-if="listVisible" type="info" @click="init" :loading="btnLoading">Refresh</Button>
-      <Button v-else type="ghost" icon="ios-undo" @click="goBack">Back</Button>
+      <Button v-if="listVisible" type="info" @click="init" :loading="btnLoading">{{ $t('page.home.button.refresh') }}</Button>
+      <Button v-else type="ghost" icon="ios-undo" @click="goBack">{{ $t('page.home.button.back') }}</Button>
     </div>
 
     <transition-group name="announcement-animate" mode="in-out">
       <div class="no-announcement" v-if="!announcements.length" key="no-announcement">
-        <p>No announcements</p>
+        <p>{{ $t('page.home.message.no_announcement') }}</p>
       </div>
       <template v-if="listVisible">
         <ul class="announcements-container" key="list">
@@ -108,7 +108,7 @@
     computed: {
       title () {
         if (this.listVisible) {
-          return this.isContest ? 'Contest Announcements' : 'Announcements'
+          return this.isContest ? this.$t('page.home.contest_title') : this.$t('page.home.title')
         } else {
           return this.announcement.title
         }

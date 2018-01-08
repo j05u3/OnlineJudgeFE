@@ -2,31 +2,31 @@
   <Row type="flex">
     <Col :span="24">
     <Panel id="contest-card" shadow>
-      <div slot="title">{{query.rule_type === '' ? 'All' : query.rule_type}} Contests</div>
+      <div slot="title">{{query.rule_type === '' ? 'All' : query.rule_type}} {{ $t('page.contests.title') }}</div>
       <div slot="extra">
         <ul class="filter">
           <li>
             <Dropdown @on-click="onRuleChange">
-              <span>{{query.rule_type === '' ? 'Rule' : query.rule_type}}
+              <span>{{query.rule_type === '' ? $t('page.contests.rule.title') : query.rule_type}}
                 <Icon type="arrow-down-b"></Icon>
               </span>
               <Dropdown-menu slot="list">
-                <Dropdown-item name="">All</Dropdown-item>
-                <Dropdown-item name="OI">OI</Dropdown-item>
-                <Dropdown-item name="ACM">ACM</Dropdown-item>
+                <Dropdown-item name="">{{ $t('page.contests.rule.all') }}</Dropdown-item>
+                <Dropdown-item name="OI">{{ $t('page.contests.rule.oi') }}</Dropdown-item>
+                <Dropdown-item name="ACM">{{ $t('page.contests.rule.acm') }}</Dropdown-item>
               </Dropdown-menu>
             </Dropdown>
           </li>
           <li>
             <Dropdown @on-click="onStatusChange">
-              <span>{{query.status === '' ? 'Status' : CONTEST_STATUS_REVERSE[query.status].name}}
+              <span>{{query.status === '' ? $t('page.contests.status.title') : CONTEST_STATUS_REVERSE[query.status].name}}
                 <Icon type="arrow-down-b"></Icon>
               </span>
               <Dropdown-menu slot="list">
-                <Dropdown-item name="">All</Dropdown-item>
-                <Dropdown-item name="0">UnderWay</Dropdown-item>
-                <Dropdown-item name="1">Not Started</Dropdown-item>
-                <Dropdown-item name="-1">Ended</Dropdown-item>
+                <Dropdown-item name="">{{ $t('page.contests.status.all') }}</Dropdown-item>
+                <Dropdown-item name="0">{{ $t('page.contests.status.underway') }}</Dropdown-item>
+                <Dropdown-item name="1">{{ $t('page.contests.status.not_started') }}</Dropdown-item>
+                <Dropdown-item name="-1">{{ $t('page.contests.status.ended') }}</Dropdown-item>
               </Dropdown-menu>
             </Dropdown>
           </li>
@@ -36,7 +36,7 @@
           </li>
         </ul>
       </div>
-      <p id="no-contest" v-if="contests.length == 0">No contest</p>
+      <p id="no-contest" v-if="contests.length == 0">{{ $t('page.contests.message.no_contest') }}</p>
       <ol id="contest-list">
         <li v-for="contest in contests">
           <Row type="flex" justify="space-between" align="middle">
