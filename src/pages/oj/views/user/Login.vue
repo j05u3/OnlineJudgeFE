@@ -23,10 +23,10 @@
         @click="handleLogin"
         class="btn" long
         :loading="btnLoginLoading">
-        Login
+        {{ $t('account.button.login') }}
       </Button>
-      <a v-if="website.allow_register" @click.stop="handleBtnClick('register')">No account? Register now!</a>
-      <a @click.stop="goResetPassword" style="float: right">Forget Password</a>
+      <a v-if="website.allow_register" @click.stop="handleBtnClick('register')">{{ $t('account.button.no_account') }}</a>
+      <a @click.stop="goResetPassword" style="float: right">{{ $t('account.button.forget_password') }}</a>
     </div>
   </div>
 </template>

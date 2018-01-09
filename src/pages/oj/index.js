@@ -108,6 +108,24 @@ const messages = {
         rank_oi: 'OI Rank'
       }
     },
+    account: {
+      button: {
+        login: 'Login',
+        register: 'Register',
+        already_register: 'Already registed? Login now!',
+        no_account: 'No account? Register now!',
+        forget_password: 'Forget Password'
+      },
+      message: {
+        empty_username: 'username is required',
+        empty_email: 'email is required',
+        invalid_email: 'email is not a valid email',
+        empty_password: 'password is required',
+        invalid_password_length: 'password must be between 6 and 20 characters',
+        notmatch_password: 'password does not match',
+        empty_captcha: 'captcha is required'
+      }
+    },
     page: {
       home: {
         contest_title: 'Contest Announcements',
@@ -285,6 +303,24 @@ const messages = {
       rank: {
         rank_acm: 'ACM 排名',
         rank_oi: 'OI 排名'
+      }
+    },
+    account: {
+      button: {
+        login: '登录',
+        register: '注册',
+        already_register: '已经注册？马上登录',
+        no_account: '没有账号？马上注册',
+        forget_password: '忘记密码'
+      },
+      message: {
+        empty_username: '请设置用户名',
+        empty_email: '请设置邮箱',
+        invalid_email: '无效的邮箱地址',
+        empty_password: '请设置密码',
+        invalid_password_length: '密码长度 6 - 20',
+        notmatch_password: '两次输入密码不一致',
+        empty_captcha: '请输入验证码'
       }
     },
     page: {

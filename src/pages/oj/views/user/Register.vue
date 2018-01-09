@@ -42,13 +42,13 @@
         @click="handleRegister"
         class="btn" long
         :loading="btnRegisterLoading">
-        Register
+        {{ $t('account.button.register') }}
       </Button>
       <Button
         type="ghost"
         @click="switchMode('login')"
         class="btn" long>
-        Already registed? Login now!
+        {{ $t('account.button.already_register') }}
       </Button>
     </div>
   </div>
