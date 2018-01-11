@@ -1,6 +1,6 @@
 <template>
   <div class="setting-main">
-    <div class="section-title">Avatar Setting</div>
+    <div class="section-title">{{ $t('userprofile.page.profile.label.avatarsetting') }}</div>
     <template v-if="!avatarOption.imgSrc">
       <Upload type="drag"
               class="mini-container"
@@ -9,7 +9,7 @@
               :before-upload="handleSelectFile">
         <div style="padding: 30px 0">
           <Icon type="ios-cloud-upload" size="52" style="color: #3399ff"></Icon>
-          <p>Drop  here, or click to select manually</p>
+          <p>{{ $t('userprofile.page.profile.button.selectavatar') }}</p>
         </div>
       </Upload>
     </template>
@@ -62,32 +62,32 @@
       </div>
     </Modal>
 
-    <div class="section-title">Profile Setting</div>
+    <div class="section-title">{{ $t('userprofile.page.profile.label.profilesetting') }}</div>
     <Form ref="formProfile" :model="formProfile">
       <Row type="flex" :gutter="30" justify="space-around">
         <Col :span="11">
-        <FormItem label="Real Name">
+        <FormItem>{{ $t('userprofile.page.profile.label.realname') }}
           <Input v-model="formProfile.real_name"/>
         </FormItem>
-        <Form-item label="School">
+        <Form-item>{{ $t('userprofile.page.profile.label.school') }}
           <Input v-model="formProfile.school"/>
         </Form-item>
-        <Form-item label="Major">
+        <Form-item>{{ $t('userprofile.page.profile.label.major') }}
           <Input v-model="formProfile.major"/>
         </Form-item>
         <Form-item>
-          <Button type="primary" @click="updateProfile" :loading="loadingSaveBtn">Save All</Button>
+          <Button type="primary" @click="updateProfile" :loading="loadingSaveBtn">{{ $t('userprofile.page.profile.button.saveall') }}</Button>
         </Form-item>
         </Col>
 
         <Col :span="11">
-        <Form-item label="Mood">
+        <Form-item>{{ $t('userprofile.page.profile.label.mood') }}
           <Input v-model="formProfile.mood"/>
         </Form-item>
-        <Form-item label="Blog">
+        <Form-item>{{ $t('userprofile.page.profile.label.blog') }}
           <Input v-model="formProfile.blog"/>
         </Form-item>
-        <Form-item label="Github">
+        <Form-item>{{ $t('userprofile.page.profile.label.github') }}
           <Input v-model="formProfile.github"/>
         </Form-item>
         </Col>

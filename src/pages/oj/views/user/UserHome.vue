@@ -16,25 +16,25 @@
 
         <div class="flex-container">
           <div class="left">
-            <p>Solved</p>
+            <p>{{ $t('userhome.label.solved') }}</p>
             <p class="emphasis">{{profile.accepted_number}}</p>
           </div>
           <div class="middle">
-            <p>Submissions</p>
+            <p>{{ $t('userhome.label.submissions') }}</p>
             <p class="emphasis">{{profile.submission_number}}</p>
           </div>
           <div class="right">
-            <p>Score</p>
+            <p>{{ $t('userhome.label.score') }}</p>
             <p class="emphasis">{{profile.total_score}}</p>
           </div>
         </div>
         <div id="problems">
-          <div v-if="problems.length">List of solved problems
+          <div v-if="problems.length">{{ $t('userhome.label.listofsolvedproblem') }}
             <Poptip v-if="refreshVisible" trigger="hover" placement="right-start">
               <Icon type="ios-help-outline"></Icon>
               <div slot="content">
-                <p>If you find the following problem id does not exist,<br> try to click the button.</p>
-                <Button type="info" @click="freshProblemDisplayID">regenerate</Button>
+                <p>{{ $t('userhome.message.regenerate') }}</p>
+                <Button type="info" @click="freshProblemDisplayID">{{ $t('userhome.button.regenerate') }}</Button>
               </div>
             </Poptip>
           </div>

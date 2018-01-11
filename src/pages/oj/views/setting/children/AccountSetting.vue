@@ -2,15 +2,15 @@
   <div class="setting-main">
     <div class="flex-container">
       <div class="left">
-        <p class="section-title">Change Password</p>
+        <p class="section-title">{{ $t('userprofile.page.account.label.changepassword') }}</p>
         <Form class="setting-content" ref="formPassword" :model="formPassword" :rules="rulePassword">
-          <FormItem label="Old Password" prop="old_password">
+          <FormItem prop="old_password">{{ $t('userprofile.page.account.label.oldpassword') }}
             <Input v-model="formPassword.old_password" type="password"/>
           </FormItem>
-          <FormItem label="New Password" prop="new_password">
+          <FormItem prop="new_password">{{ $t('userprofile.page.account.label.newpassword') }}
             <Input v-model="formPassword.new_password" type="password"/>
           </FormItem>
-          <FormItem label="Confirm New Password" prop="again_password">
+          <FormItem prop="again_password">{{ $t('userprofile.page.account.label.confirmnewpassword') }}
             <Input v-model="formPassword.again_password" type="password"/>
           </FormItem>
           <FormItem v-if="visible.tfaRequired" label="Two Factor Auth" prop="tfa_code">
@@ -19,28 +19,28 @@
           <FormItem v-if="visible.passwordAlert">
             <Alert type="success">You will need to login again after 5 seconds..</Alert>
           </FormItem>
-          <Button type="primary" @click="changePassword">Update Password</Button>
+          <Button type="primary" @click="changePassword">{{ $t('userprofile.page.account.button.updatepassword') }}</Button>
         </Form>
       </div>
 
       <div class="middle separator"></div>
 
       <div class="right">
-        <p class="section-title">Change Email</p>
+        <p class="section-title">{{ $t('userprofile.page.account.label.changeemail') }}</p>
         <Form class="setting-content" ref="formEmail" :model="formEmail" :rules="ruleEmail">
-          <FormItem label="Current Password" prop="password">
+          <FormItem prop="password">{{ $t('userprofile.page.account.label.currentpassword') }}
             <Input v-model="formEmail.password" type="password"/>
           </FormItem>
-          <FormItem label="Old Email">
+          <FormItem>{{ $t('userprofile.page.account.label.oldemail') }}
             <Input v-model="formEmail.old_email" disabled/>
           </FormItem>
-          <FormItem label="New Email" prop="new_email">
+          <FormItem prop="new_email">{{ $t('userprofile.page.account.label.newemail') }}
             <Input v-model="formEmail.new_email"/>
           </FormItem>
           <FormItem v-if="visible.tfaRequired" label="Two Factor Auth" prop="tfa_code">
             <Input v-model="formEmail.tfa_code"/>
           </FormItem>
-          <Button type="primary" @click="changeEmail">Change Email</Button>
+          <Button type="primary" @click="changeEmail">{{ $t('userprofile.page.account.button.changeemail') }}</Button>
         </Form>
       </div>
     </div>

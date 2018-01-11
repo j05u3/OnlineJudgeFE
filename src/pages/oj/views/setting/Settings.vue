@@ -18,9 +18,9 @@
               </div>
             </div>
 
-            <Menu-item name="/setting/profile">Profile</Menu-item>
-            <Menu-item name="/setting/account">Account</Menu-item>
-            <Menu-item name="/setting/security">Security</Menu-item>
+            <Menu-item name="/setting/profile">{{ $t('userprofile.menu.profile') }}</Menu-item>
+            <Menu-item name="/setting/account">{{ $t('userprofile.menu.account') }}</Menu-item>
+            <Menu-item name="/setting/security">{{ $t('userprofile.menu.security') }}</Menu-item>
           </Menu>
         </div>
         <div class="panel">

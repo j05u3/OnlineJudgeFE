@@ -83,6 +83,61 @@ Vue.component(Panel.name, Panel)
 const messages = {
   en: Object.assign({
     message: 'hello',
+    userhome: {
+      label: {
+        solved: 'Solved',
+        submissions: 'Submissions',
+        score: 'Score',
+        listofsolvedproblem: 'List of solved problems'
+      },
+      message: {
+        regenerate: 'If you find the following problem id does not exist, try to click the button.'
+      },
+      button: {
+        regenerate: 'regenerate'
+      }
+    },
+    userprofile: {
+      menu: {
+        profile: 'Profile',
+        account: 'Account',
+        security: 'Security'
+      },
+      page: {
+        profile: {
+          label: {
+            avatarsetting: 'Avatar Setting',
+            profilesetting: 'Profile Setting',
+            realname: 'Real Name',
+            mood: 'Mood',
+            school: 'School',
+            blog: 'Blog',
+            major: 'Major',
+            github: 'Github'
+          },
+          button: {
+            saveall: 'Save All',
+            selectavatar: 'Drop here, or click to select manually'
+          }
+        },
+        account: {
+          label: {
+            changepassword: 'Change Password',
+            oldpassword: 'Old Password',
+            newpassword: 'New Password',
+            confirmnewpassword: 'Confirm New Password',
+            changeemail: 'Change Email',
+            currentpassword: 'Current Password',
+            oldemail: 'Old Email',
+            newemail: 'New Email'
+          },
+          button: {
+            updatepassword: 'Update Password',
+            changeemail: 'Change Email'
+          }
+        }
+      }
+    },
     usemenu: {
       home: 'Home',
       submissions: 'Submissions',
@@ -148,6 +203,12 @@ const messages = {
           details: 'Details',
           close: 'Close'
         },
+        message: {
+          submitsuccess: 'Submitted successfully',
+          havesolvedproblem: 'You have solved the problem',
+          havesubmitsolution: 'You have submitted a solution.',
+          contesthasended: 'Contest has ended'
+        },
         switch: {
           tags: 'Tags'
         },
@@ -196,6 +257,9 @@ const messages = {
         }
       },
       contests: {
+        type: {
+          all: 'All'
+        },
         title: 'Contests',
         message: {
           no_contest: 'No contest'
@@ -280,6 +344,61 @@ const messages = {
   }, en),
   zh: Object.assign({
     message: '你好',
+    userhome: {
+      label: {
+        solved: '已解决',
+        submissions: '已提交',
+        score: '总得分',
+        listofsolvedproblem: '已解决问题列表'
+      },
+      message: {
+        regenerate: '尝试点击重新生成来刷新题目列表'
+      },
+      button: {
+        regenerate: '重新生成'
+      }
+    },
+    userprofile: {
+      menu: {
+        profile: '概况',
+        account: '账号',
+        security: '安全'
+      },
+      page: {
+        profile: {
+          label: {
+            avatarsetting: '头像设置',
+            profilesetting: '个人资料',
+            realname: '真实姓名',
+            mood: '签名',
+            school: '学校',
+            blog: '博客',
+            major: '专业',
+            github: 'Github'
+          },
+          button: {
+            saveall: '保存',
+            selectavatar: '拖拽至此，或点击手动选择'
+          }
+        },
+        account: {
+          label: {
+            changepassword: '修改密码',
+            oldpassword: '旧密码',
+            newpassword: '新密码',
+            confirmnewpassword: '确认新密码',
+            changeemail: '修改邮箱',
+            currentpassword: '当前密码',
+            oldemail: '旧邮箱',
+            newemail: '新邮箱'
+          },
+          button: {
+            updatepassword: '更新密码',
+            changeemail: '更新邮箱'
+          }
+        }
+      }
+    },
     usemenu: {
       home: '主页',
       submissions: '提交',
@@ -345,6 +464,12 @@ const messages = {
           details: '详情',
           close: '关闭'
         },
+        message: {
+          submitsuccess: '提交成功',
+          havesolvedproblem: '你已经解决了该问题',
+          havesubmitsolution: '你已经提交了解决方案',
+          contesthasended: '比赛已结束'
+        },
         switch: {
           tags: '标签'
         },
@@ -393,6 +518,9 @@ const messages = {
         }
       },
       contests: {
+        type: {
+          all: '所有'
+        },
         title: '竞赛',
         message: {
           no_contest: '暂无竞赛'
@@ -460,14 +588,14 @@ const messages = {
         title_oi: 'OI 排名列表',
         table_acm: {
           user: '用户',
-          mood: 'Mood',
+          mood: '签名',
           ac: 'AC',
           total: '统计',
           rating: 'Rating'
         },
         table_oi: {
           user: '用户',
-          mood: 'Mood',
+          mood: '签名',
           score: '分数',
           ac: 'AC',
           total: '统计',
