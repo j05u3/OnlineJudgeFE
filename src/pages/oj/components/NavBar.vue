@@ -44,6 +44,11 @@
       </Submenu>
       <template v-if="!isAuthenticated">
         <div class="btn-menu">
+          <Button class="btn-language"
+                  type="ghost"
+                  shape="circle"
+                  @click="changeLanguage()">{{ language }}
+          </Button>
           <Button type="ghost"
                   ref="loginBtn"
                   shape="circle"
@@ -58,7 +63,13 @@
         </div>
       </template>
       <template v-else>
-        <Dropdown class="drop-menu" @on-click="handleRoute" placement="bottom" trigger="click">
+        <div class="btn-menu">
+          <Button class="btn-language"
+                  type="ghost"
+                  shape="circle"
+                  @click="changeLanguage()">{{ language }}
+          </Button>
+          <Dropdown class="drop-menu" @on-click="handleRoute" placement="bottom" trigger="click">
           <Button type="text" class="drop-menu-title">{{ user.username }}
             <Icon type="arrow-down-b"></Icon>
           </Button>
@@ -70,6 +81,7 @@
             <Dropdown-item divided name="/logout">{{ $t('usemenu.logout') }}</Dropdown-item>
           </Dropdown-menu>
         </Dropdown>
+        </div>
       </template>
     </Menu>
     <Modal v-model="modalVisible" :width="400">
@@ -90,6 +102,11 @@
       login,
       register
     },
+    data () {
+      return {
+        language: '英文'
+      }
+    },
     mounted () {
       this.getProfile()
     },
@@ -107,6 +124,15 @@
           visible: true,
           mode: mode
         })
+      },
+      changeLanguage () {
+        if (this.language === '英文') {
+          this.$i18n.locale = 'en'
+          this.language = '中文'
+        } else if (this.language === '中文') {
+          this.$i18n.locale = 'zh'
+          this.language = '英文'
+        }
       }
     },
     computed: {
@@ -160,6 +186,9 @@
     .btn-menu {
       font-size: 16px;
       float: right;
+      margin-right: 10px;
+    }
+    .btn-language {
       margin-right: 10px;
     }
   }
