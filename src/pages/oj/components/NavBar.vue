@@ -1,7 +1,10 @@
 <template>
   <div id="header">
     <Menu theme="light" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
-      <div class="logo"><span>{{website.website_name}}</span></div>
+      <!--<div class="logo"><span>{{website.website_name}}</span></div>-->
+      <div class="logo">
+        <img style="vertical-align:middle" src="../../../assets/camlunilogo.png"/>
+      </div>
       <Menu-item name="/">
         <Icon type="home"></Icon>
         {{ $t("navbar.home") }}
