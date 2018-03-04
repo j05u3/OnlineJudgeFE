@@ -6,7 +6,7 @@
         <img style="vertical-align:middle"
           alt="Universidad Nacional de Ingeniería"
           src="../../../assets/logo_uni_2016.png"
-          height="150"
+          height="40"
           />
       </div>
       <Menu-item name="/">
