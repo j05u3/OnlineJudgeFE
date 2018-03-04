@@ -1,7 +1,7 @@
 <template>
   <div>
     <panel class="container">
-      <div slot="title">Compiler & Judger</div>
+      <div slot="title">{{ $t("about.judger.title") }}</div>
       <div class="content markdown-body">
         <ul>
           <li v-for="lang in languages">{{lang.name}} ( {{lang.description}} )
@@ -12,12 +12,12 @@
     </panel>
 
     <panel :padding="15" class="container">
-      <div slot="title">Result Explanation</div>
+      <div slot="title">{{ $t("about.judger.result_explanation") }}</div>
       <div class="content">
         <ul>
           <li><b>Pending & Juding</b> : You solution will be judged soon, please wait for result</li>
           <li><b>Compile Error</b> :	Failed to compile your source code. Click on the link to see compiler's output.
-      </li>
+          </li>
           <li><b>Accepted</b> :	Congratulations. Your solution is correct.</li>
           <li><b>Wrong Answer</b> :	Your program's output doesn't match judger's answer.</li>
           <li>

@@ -100,25 +100,25 @@ module.exports = {
   },
   page: {
     home: {
-      contest_title: 'Contest Announcements',
-      title: 'Announcements',
+      contest_title: 'Anuncios de la ronda',
+      title: 'Anuncios',
       button: {
-        refresh: 'Refresh',
-        back: 'Back'
+        refresh: 'Actualizar',
+        back: 'Regresar'
       },
       message: {
-        no_announcement: 'No announcements'
+        no_announcement: 'No hay anuncios'
       }
     },
     problem: {
       title: 'Lista de problemas',
       button: {
-        refresh: 'Reset',
-        pickone: 'Pick one',
-        submit: 'Submit',
-        submitting: 'Submitting',
-        details: 'Details',
-        close: 'Close'
+        refresh: 'Actualizar',
+        pickone: 'Escoger uno al azar',
+        submit: 'Enviar',
+        submitting: 'Enviando',
+        details: 'Detalles',
+        close: 'Cerrar'
       },
       message: {
         submitsuccess: 'Enviado exitosamente',
@@ -144,7 +144,8 @@ module.exports = {
         level: 'Level',
         total: 'Total',
         ac_rate: 'AC Rate',
-        tags: 'Tags'
+        tags: 'Tags',
+        good_luck: 'Buena suerte!'
       },
       label: {
         description: 'Descripción',
@@ -175,11 +176,11 @@ module.exports = {
     },
     contests: {
       type: {
-        all: 'All'
+        all: 'Todas las '
       },
-      title: 'Concursos',
+      title: 'Rondas',
       message: {
-        no_contest: 'No contest'
+        no_contest: 'No hay rondas'
       },
       table: {
         startat: 'StartAt',
@@ -189,20 +190,21 @@ module.exports = {
         creator: 'Creator'
       },
       rule: {
-        title: 'Rule',
-        all: 'All',
+        title: 'Estilo (reglas)',
+        all: 'Todos',
         oi: 'OI',
         acm: 'ACM'
       },
       status: {
-        all: 'All',
-        underway: 'Underway',
-        not_started: 'Not Started',
-        ended: 'Ended'
+        title: 'Estado',
+        all: 'Todas',
+        underway: 'Sucediendo ahora',
+        not_started: 'Aún no iniciadas',
+        ended: 'Terminadas'
       },
       menu: {
         problems: 'Problemas',
-        announcements: 'Announcements',
+        announcements: 'Anuncios',
         submissions: 'Envíos',
         rankings: 'Rankings',
         overview: 'Overview'
@@ -232,7 +234,7 @@ module.exports = {
       },
       switch: {
         all: 'Todo',
-        mine: 'Solo míos'
+        mine: 'Míos'
       },
       search: {
         placeholder: 'Buscar autor'
@@ -256,6 +258,12 @@ module.exports = {
         total: 'Total',
         rating: 'Rating'
       }
+    }
+  },
+  about: {
+    judger: {
+      title: 'Compilador y Juez',
+      result_explanation: 'Sobre el resultado'
     }
   }
 }

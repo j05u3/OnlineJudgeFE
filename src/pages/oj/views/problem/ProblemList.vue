@@ -264,7 +264,7 @@
       },
       pickone () {
         api.pickone().then(res => {
-          this.$success('Good Luck')
+          this.$success(this.$t('page.problem.table.good_luck'))
           this.$router.push({name: 'problem-details', params: {problemID: res.data.data}})
         })
       }

@@ -257,5 +257,11 @@ module.exports = {
         rating: 'Rating'
       }
     }
+  },
+  about: {
+    judger: {
+      title: 'Compiler & Judger',
+      result_explanation: 'Sobre el resultado'
+    }
   }
 }
