@@ -12,7 +12,6 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "@etu/simditor-markdown": "^2.0.2",
     "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
     "browser-detect": "^0.2.22",
@@ -26,6 +25,7 @@
     "raven-js": "^3.21.0",
     "screenfull": "^3.3.2",
     "simditor": "^2.3.6",
+    "simditor-markdown": "^1.1.2",
     "vue": "^2.5.13",
     "vue-clipboard2": "0.0.7",
     "vue-codemirror-lite": "^1.0.3",

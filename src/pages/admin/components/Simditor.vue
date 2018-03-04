@@ -5,8 +5,8 @@
 <script>
   import Simditor from 'simditor'
   import 'simditor/styles/simditor.css'
-  import '@etu/simditor-markdown'
-  import '@etu/simditor-markdown/styles/simditor-markdown.css'
+  import 'simditor-markdown'
+  import 'simditor-markdown/styles/simditor-markdown.css'
 
   export default {
     name: 'Simditor',
