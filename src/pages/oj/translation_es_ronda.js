@@ -65,7 +65,7 @@ module.exports = {
   navbar: {
     home: 'Inicio',
     problems: 'Problemas',
-    contests: 'Concursos',
+    contests: 'Rondas',
     status: 'Envíos',
     rank: 'Rankings',
     about: 'Acerca de',
@@ -100,7 +100,7 @@ module.exports = {
   },
   page: {
     home: {
-      contest_title: 'Anuncios de la concurso',
+      contest_title: 'Anuncios de la ronda',
       title: 'Anuncios',
       button: {
         refresh: 'Actualizar',
@@ -176,11 +176,11 @@ module.exports = {
     },
     contests: {
       type: {
-        all: 'Todos los '
+        all: 'Todas las '
       },
-      title: 'Concursos',
+      title: 'Rondas',
       message: {
-        no_contest: 'No hay concursos'
+        no_contest: 'No hay rondas'
       },
       table: {
         startat: 'StartAt',
@@ -199,8 +199,8 @@ module.exports = {
         title: 'Estado',
         all: 'Todas',
         underway: 'Sucediendo ahora',
-        not_started: 'Aún no iniciados',
-        ended: 'Terminados'
+        not_started: 'Aún no iniciadas',
+        ended: 'Terminadas'
       },
       menu: {
         problems: 'Problemas',
