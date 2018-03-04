@@ -3,7 +3,11 @@
     <Menu theme="light" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
       <!--<div class="logo"><span>{{website.website_name}}</span></div>-->
       <div class="logo">
-        <img style="vertical-align:middle" src="../../../assets/camlunilogo.png"/>
+        <img style="vertical-align:middle"
+          alt="Universidad Nacional de Ingeniería"
+          src="../../../assets/logo_uni_2016.png"
+          height="150"
+          />
       </div>
       <Menu-item name="/">
         <Icon type="home"></Icon>
