@@ -107,7 +107,7 @@
     },
     data () {
       return {
-        language: '英文'
+        language: 'es'
       }
     },
     mounted () {
@@ -129,12 +129,12 @@
         })
       },
       changeLanguage () {
-        if (this.language === '英文') {
+        if (this.language === 'es') {
           this.$i18n.locale = 'en'
-          this.language = '中文'
-        } else if (this.language === '中文') {
-          this.$i18n.locale = 'zh'
-          this.language = '英文'
+          this.language = 'en'
+        } else if (this.language === 'en') {
+          this.$i18n.locale = 'es'
+          this.language = 'es'
         }
       }
     },
