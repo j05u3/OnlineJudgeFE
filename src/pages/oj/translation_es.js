@@ -23,18 +23,18 @@ module.exports = {
     page: {
       profile: {
         label: {
-          avatarsetting: 'Avatar Setting',
-          profilesetting: 'Profile Setting',
-          realname: 'Real Name',
-          mood: 'Mood',
-          school: 'School',
+          avatarsetting: 'Ajuste de Avatar',
+          profilesetting: 'Ajuste de Perfil',
+          realname: 'Nombres',
+          mood: 'Estado',
+          school: 'Escuela',
           blog: 'Blog',
-          major: 'Major',
+          major: 'Grado',
           github: 'Github'
         },
         button: {
           saveall: 'Guardar todo',
-          selectavatar: 'Drop here, or click to select manually'
+          selectavatar: 'Arrastre aquí, o click para seleccionar manualmente'
         }
       },
       account: {
@@ -76,8 +76,8 @@ module.exports = {
   },
   navbarlist: {
     rank: {
-      rank_acm: 'ACM Rank',
-      rank_oi: 'OI Rank'
+      rank_acm: 'Ranking ACM',
+      rank_oi: 'Ranking IOI'
     }
   },
   account: {
@@ -100,7 +100,7 @@ module.exports = {
   },
   page: {
     home: {
-      contest_title: 'Anuncios de la concurso',
+      contest_title: 'Anuncio de concursos',
       title: 'Anuncios',
       button: {
         refresh: 'Actualizar',
@@ -123,8 +123,8 @@ module.exports = {
       message: {
         submitsuccess: 'Enviado exitosamente',
         havesolvedproblem: 'Has resuelto el problema!! 🙂',
-        havesubmitsolution: 'You have submitted a solution.',
-        contesthasended: 'Contest has ended'
+        havesubmitsolution: 'Has enviado una solución',
+        contesthasended: 'El concurso ha terminado'
       },
       switch: {
         tags: 'Tags'
@@ -140,10 +140,10 @@ module.exports = {
         high: 'Alta'
       },
       table: {
-        title: 'Title',
-        level: 'Level',
-        total: 'Total',
-        ac_rate: 'AC Rate',
+        title: 'Título',
+        level: 'Dificultad',
+        total: 'Total de envíos',
+        ac_rate: 'Porcentaje de AC',
         tags: 'Tags',
         good_luck: 'Buena suerte!'
       },
@@ -159,16 +159,16 @@ module.exports = {
         timelimit: 'Límite de tiempo',
         memorylimit: 'Límite de memoria',
         createdby: 'Creado por',
-        level: 'Nivel',
+        level: 'Dificultad',
         score: 'Puntaje',
         tags: 'Etiquetas'
       },
       statisticlabel: {
-        statistic: 'Statistic'
+        statistic: 'Estadísticas'
       },
       code: {
         language: 'Lenguaje',
-        theme: 'Theme'
+        theme: 'Tema'
       },
       menu: {
         submissions: 'Envíos'
@@ -192,7 +192,7 @@ module.exports = {
       rule: {
         title: 'Estilo (reglas)',
         all: 'Todos',
-        oi: 'OI',
+        oi: 'IOI',
         acm: 'ACM'
       },
       status: {
@@ -241,18 +241,18 @@ module.exports = {
       }
     },
     rank: {
-      title_acm: 'ACM Ranklist',
-      title_oi: 'OI Ranklist',
+      title_acm: 'Ranking ACM',
+      title_oi: 'Ranking IOI',
       table_acm: {
-        user: 'User',
-        mood: 'Mood',
+        user: 'Usuario',
+        mood: 'Estado',
         ac: 'AC',
         total: 'Total',
         rating: 'Rating'
       },
       table_oi: {
-        user: 'User',
-        mood: 'Mood',
+        user: 'Usuario',
+        mood: 'Estado',
         score: 'Score',
         ac: 'AC',
         total: 'Total',
