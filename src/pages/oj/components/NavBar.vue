@@ -5,7 +5,7 @@
       <div class="logo">
         <img style="vertical-align:middle"
           alt="Universidad Nacional de Ingeniería"
-          src="../../../assets/logo_uni_2016.png"
+          src="../../../assets/logoeck.png"
           height="60"
           />
       </div>
